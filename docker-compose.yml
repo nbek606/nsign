@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  backend:
+    build: ./test_api
+    ports:
+      - "8000:8000"
+    restart: always
