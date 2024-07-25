@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  backend:
+    build:
+      context: test_api
+      dockerfile: dev.dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+    volumes:
+      - ./test_api:/app
+    command: ["manage.py", "runserver", "0.0.0.0:8000"]

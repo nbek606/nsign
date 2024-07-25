@@ -7,6 +7,7 @@ RUN  pip install --no-cache-dir -r requirements.txt
 
 RUN python manage.py migrate
 RUN python manage.py inituser
+RUN python manage.py initnotes
 
 EXPOSE 8000
 ENTRYPOINT ["python3"]
